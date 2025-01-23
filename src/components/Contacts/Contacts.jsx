@@ -30,10 +30,10 @@ function Contacts() {
             <div className="contact__card">
               <i className="bx bx-mail-send contact__card-icon"></i>
               <h3 className="contact__card-title">Email</h3>
-              <span className="contact__card-data">userAgmail.com</span>
+              <span className="contact__card-data">manoharkumawat217@gmail.com</span>
 
               <a
-                href="mailto:examplemail@gmail.com.com"
+                href="mailto: manoharkumawat217@gmail.com"
                 className="contact__button"
               >
                 Write Me
