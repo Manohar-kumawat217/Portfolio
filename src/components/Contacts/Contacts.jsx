@@ -6,15 +6,22 @@ function Contacts() {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    emailjs
+      .sendForm(
+        `${import.meta.env.VITE_EMAIL_SERVICE_ID}`,
+        `${import.meta.env.VITE_EMAIL_TEMPLATE_ID}`,
+        form.current,
+        {
+          publicKey: `${import.meta.env.PUBLIC_KEY}`,
+        }
+      )
+      .then(() => {
+        prompt("Your message has been sent successfully!");
+      })
+      .catch((error) => {
+        console.log(error.text);
+      });
 
-    emailjs.sendForm(
-      import.meta.env.EMAIL_SERVICE_ID,
-      import.meta.env.EMAIL_TEMPLATE_ID,
-      form.current,
-      {
-        publicKey: import.meta.env.PUBLIC_KEY,
-      }
-    );
     e.target.reset();
   };
 
