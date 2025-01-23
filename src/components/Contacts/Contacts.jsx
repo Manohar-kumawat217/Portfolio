@@ -47,7 +47,7 @@ function Contacts() {
               <span className="contact__card-data">+91 8769173075</span>
 
               <a
-                href="https://api.whatsapp.com/send?phone=8769173075&text=Hello, more information!"
+                href="https://api.whatsapp.com/send?phone=918769173075&text=Hello, more information!"
                 className="contact__button"
               >
                 Write Me
