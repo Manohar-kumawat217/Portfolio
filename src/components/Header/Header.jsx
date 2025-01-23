@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./header.css";
+import "./Header.css";
 
 const Header = () => {
   /* State for menu toggle and active navigation */

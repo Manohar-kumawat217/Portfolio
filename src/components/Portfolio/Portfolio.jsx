@@ -2,7 +2,7 @@ import React from "react";
 import work1 from "../../assets/work1.png";
 import work2 from "../../assets/work2.png";
 import work3 from "../../assets/work3.png";
-import "./portfolio.css";
+import "./Portfolio.css";
 function Portfolio() {
   return (
     <section className="section" id="portfolio">
