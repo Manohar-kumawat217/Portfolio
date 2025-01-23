@@ -6,22 +6,15 @@ function Contacts() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        `${import.meta.env.VITE_EMAIL_SERVICE_ID}`,
-        `${import.meta.env.VITE_EMAIL_TEMPLATE_ID}`,
-        form.current,
-        {
-          publicKey: `${import.meta.env.PUBLIC_KEY}`,
-        }
-      )
-      .then(() => {
-        prompt("Your message has been sent successfully!");
-      })
-      .catch((error) => {
-        console.log(error.text);
-      });
 
+    emailjs.sendForm(
+      import.meta.env.EMAIL_SERVICE_ID,
+      import.meta.env.EMAIL_TEMPLATE_ID,
+      form.current,
+      {
+        publicKey: import.meta.env.PUBLIC_KEY,
+      }
+    );
     e.target.reset();
   };
 
@@ -37,10 +30,12 @@ function Contacts() {
             <div className="contact__card">
               <i className="bx bx-mail-send contact__card-icon"></i>
               <h3 className="contact__card-title">Email</h3>
-              <span className="contact__card-data">userAgmail.com</span>
+              <span className="contact__card-data">
+                manoharkumawat217@gmail.com
+              </span>
 
               <a
-                href="mailto:examplemail@gmail.com.com"
+                href="mailto: manoharkumawat217@gmail.com"
                 className="contact__button"
               >
                 Write Me
@@ -54,7 +49,7 @@ function Contacts() {
               <span className="contact__card-data">+91 8769173075</span>
 
               <a
-                href="https://api.whatsapp.com/send?phone=8769173075&text=Hello, more information!"
+                href="https://api.whatsapp.com/send?phone=918769173075&text=Hello, more information!"
                 className="contact__button"
               >
                 Write Me
