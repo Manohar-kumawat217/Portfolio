@@ -7,7 +7,7 @@ function Backend() {
       <div className="skills__box">
         <div className="skills__group">
           <div className="skills__data">
-            <i class="bx bx-badge-check skills__badge__icon"></i>
+            <i className="bx bx-badge-check skills__badge__icon"></i>
 
             <div className="">
               <h3 className="skills__name">ExpressJS</h3>
@@ -15,7 +15,7 @@ function Backend() {
             </div>
           </div>
           <div className="skills__data">
-            <i class="bx bx-badge-check skills__badge__icon"></i>
+            <i className="bx bx-badge-check skills__badge__icon"></i>
 
             <div className="">
               <h3 className="skills__name">Node JS</h3>
@@ -23,7 +23,7 @@ function Backend() {
             </div>
           </div>
           <div className="skills__data">
-            <i class="bx bx-badge-check skills__badge__icon"></i>
+            <i className="bx bx-badge-check skills__badge__icon"></i>
 
             <div className="">
               <h3 className="skills__name">MySQL</h3>
@@ -33,7 +33,7 @@ function Backend() {
         </div>
         <div className="skills__group">
           <div className="skills__data">
-            <i class="bx bx-badge-check skills__badge__icon"></i>
+            <i className="bx bx-badge-check skills__badge__icon"></i>
 
             <div className="">
               <h3 className="skills__name">MongoDB</h3>

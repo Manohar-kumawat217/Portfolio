@@ -1,12 +1,29 @@
-import React from "react";
-
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import "./contacts.css";
 function Contacts() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      import.meta.env.EMAIL_SERVICE_ID,
+      import.meta.env.EMAIL_TEMPLATE_ID,
+      form.current,
+      {
+        publicKey: import.meta.env.PUBLIC_KEY,
+      }
+    );
+    e.target.reset();
+  };
+
   return (
     <section className="contact section" id="contact">
       <h2 className="section__title">Get in touch</h2>
       <span className="section__subtitle">Contact Me</span>
 
-      <div className="contact__conatiner container grid">
+      <div className="contact__container container grid">
         <div className="contact__content">
           <h3 className="contact__title">Talk to me</h3>
           <div className="contact__info">
@@ -20,7 +37,7 @@ function Contacts() {
                 className="contact__button"
               >
                 Write Me
-                <i className="uil uil-right-arrow-alt contact__button-icon"></i>
+                <i className="uil uil-arrow-right contact__button-icon"></i>
               </a>
             </div>
 
@@ -34,7 +51,7 @@ function Contacts() {
                 className="contact__button"
               >
                 Write Me
-                <i className="uil uil-right-arrow-alt contact__button-icon"></i>
+                <i className="uil uil-arrow-right contact__button-icon"></i>
               </a>
             </div>
 
@@ -48,14 +65,14 @@ function Contacts() {
                 className="contact__button"
               >
                 Write Me
-                <i className="uil uil-right-arrow-alt contact__button-icon"></i>
+                <i className="uil uil-arrow-right contact__button-icon"></i>
               </a>
             </div>
           </div>
         </div>
         <div className="contact__content">
           <h3 className="contact__title">Write me your project</h3>
-          <form className="contact__form">
+          <form ref={form} onSubmit={sendEmail} className="contact__form">
             <div className="contact__form-div">
               <label className="contact__form-tag">Name</label>
               <input
@@ -76,13 +93,13 @@ function Contacts() {
               />
             </div>
 
-            <div className="contact__form-div">
+            <div className="contact__form-div contact__form-area">
               <label className="contact__form-tag">Project</label>
               <textarea
                 name="project"
                 cols="30"
                 rows="10"
-                className="contact__form-input"
+                className="contact__form-input "
                 placeholder="Write your project"
               ></textarea>
             </div>
@@ -90,7 +107,7 @@ function Contacts() {
             <button className="button button--flex">
               Send Message
               <svg
-                class="button__icon"
+                className="button__icon"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
